@@ -1,0 +1,89 @@
+.card {
+    width: 300px;
+    background-color: #bbafaf;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(73, 90, 90);
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.stock {
+    font-size: 13px;
+    color: #131010;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.cantidadContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.qtyButton {
+    background-color: #9c8b87;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
