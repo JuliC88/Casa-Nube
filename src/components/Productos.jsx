@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './styleProductos.css';
 import '../index.css';
+import { CartContext } from '../context/CartContext';
 
-const Productos = ({ producto, agregarCarrito }) => {
+const Productos = ({ producto }) => {
     const [cantidad, setCantidad] = useState(1);
+    const {handleAddToCart} = useContext(CartContext)
 
     const increase = () => setCantidad(prev => (prev < producto.rating.count ? prev + 1 : prev));
     const decrease = () => setCantidad(prev => (prev > 1 ? prev - 1 : prev));
@@ -24,7 +26,7 @@ const Productos = ({ producto, agregarCarrito }) => {
                 <button className='qtyButton' onClick={increase}>+</button>
             </div>
 
-            <button onClick={() => agregarCarrito(producto, cantidad)}>
+            <button onClick={() => handleAddToCart(producto, cantidad)}>
                 Agregar al carrito
             </button>
         </section>

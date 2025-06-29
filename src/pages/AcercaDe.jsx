@@ -5,7 +5,7 @@ import Footer from '../components/Estaticos/Footer'
 const AcercaDe = ({cart, quitarProducto}) => {
   return (
     <>
-      <Header quitarProducto={quitarProducto} cartItems={cart}/>
+      <Header />
       <h1>Conocenos</h1>
       <Footer/>
     </>
