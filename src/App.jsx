@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import AcercaDe from './pages/AcercaDe';
 import Galeria from './pages/Galeria';
 import Contacto from './pages/Contacto';
-import NotFound from './pages/Notfound';
+import NotFound from './pages/NotFound';
 import { CartContext } from './context/CartContext';
 import DetalleProductos from './components/DetalleProductos';
 import { RutasProtegidas } from './rutas/RutasProtegidas';
