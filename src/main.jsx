@@ -9,6 +9,7 @@ import { AuthProvider } from './context/AuthContext.jsx'
 import { AdminProvider } from './context/AdminContext.jsx'
 import { ToastContainer } from 'react-toastify'
 import { BrowserRouter as Router } from 'react-router-dom'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
