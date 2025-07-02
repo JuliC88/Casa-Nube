@@ -1,0 +1,18 @@
+.link {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.link:hover {
+    background-color: var(--verde-claro);
+    color: #ffffff;
+}
+
+.link.active {
+    color: var(--mostaza);
+    font-weight: bold;
+}

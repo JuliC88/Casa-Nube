@@ -1,0 +1,217 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--arena);
+}
+
+/* Título del panel */
+.title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.4rem;
+    color: var(--texto);
+    font-weight: bold;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.navItem {
+    list-style: none;
+}
+
+.navButton {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--verde);
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+/* Lista de productos */
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+/* Tarjeta individual del producto */
+.listItem {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 260px;
+    padding: 1.2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.listItem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen del producto */
+.listItemImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Nombre y precio */
+.listItem span {
+    display: block;
+    font-weight: 600;
+    color: var(--texto);
+    margin: 0.3rem 0;
+    font-size: 1.1rem;
+}
+
+/* Descripción */
+.listItem p {
+    font-size: 0.85rem;
+    color: var(--gris);
+    margin-bottom: 1rem;
+}
+
+/* Botones de editar y eliminar */
+.editButton,
+.deleteButton {
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s;
+}
+
+.deleteButton {
+    background-color: var(--mostaza);
+}
+
+.editButton:hover,
+.deleteButton:hover {
+    opacity: 0.85;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón para agregar producto */
+button {
+    margin: 2rem auto 0;
+    display: block;
+    background-color: var(--verde);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--verde-claro);
+}
+
+.form-admin {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.form-admin h2 {
+    text-align: center;
+    color: var(--verde);
+    margin-bottom: 2rem;
+}
+
+/* Agrupador de cada campo */
+.form-admin div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+/* Etiquetas */
+.form-admin label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--texto);
+}
+
+/* Campos de entrada */
+.form-admin input,
+.form-admin textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Campo de texto más largo */
+.form-admin textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botón centrado */
+.form-admin button[type="submit"] {
+    background-color: var(--mostaza);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-admin button[type="submit"]:hover {
+    background-color: var(--mostaza-hover);
+}
+
+/* Mensajes de error */
+.form-admin p {
+    font-size: 0.85rem;
+    color: red;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .listItem {
+        width: 90%;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}

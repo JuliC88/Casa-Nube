@@ -1,32 +1,289 @@
-nav{
-    background-color: #333;
+:root {
+    --verde: #6b9080;
+    --verde-claro: #a4c3b2;
+    --mostaza: #e0a800;
+    --mostaza-hover: #d18d00;
+    --arena: #f8f5f0;
+    --texto: #3b3b3b;
+    --gris: #666666;
+}
+
+/* NAVBAR (con Bootstrap) */
+.navbar {
+    background-color: var(--verde) !important;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-brand.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
     color: white;
-    padding: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
-ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    align-items: center;
+
+.navbar-brand.logo:hover {
+    color: var(--verde-claro);
 }
-.link{
+
+.link {
     color: white;
     text-decoration: none;
-
-}
-footer{
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
-.btnCart{
+.link:hover {
+    background-color: var(--verde-claro);
+    color: #fff;
+}
+
+.link.active {
+    color: var(--mostaza);
+    font-weight: bold;
+}
+
+/* CARRITO */
+.btnCart {
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 12px;
 }
 
-.fa-cart-shopping{
-    color:#ffe07a
+.btnCart svg {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btnCart:hover svg {
+    transform: scale(1.1);
+}
+
+/* HOME */
+.home-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 2.6rem;
+    color: var(--texto);
+    margin-bottom: 1rem;
+}
+
+.home-container h2 {
+    font-size: 1.8rem;
+    color: var(--verde);
+    margin-bottom: 1.5rem;
+}
+
+.home-container p {
+    font-size: 1rem;
+    color: var(--gris);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+/* GALERIA */
+.galeria-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.galeria-container h1 {
+    font-size: 2.4rem;
+    color: var(--texto);
+    margin-bottom: 1rem;
+}
+
+.galeria-container p {
+    font-size: 1rem;
+    color: var(--gris);
+    margin-bottom: 2rem;
+}
+
+/* ACERCADE STYLES */
+.acercade-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.acercade-container section {
+    margin-bottom: 2.5rem;
+}
+
+.acercade-container ul {
+    margin-top: 1rem;
+    padding-left: 0;
+    line-height: 1.8;
+    text-align: center;
+    list-style: none;
+}
+
+.acercade-container li {
+    font-size: 1rem;
+    color: var(--texto);
+    margin-bottom: 0.5rem;
+}
+
+.acercade-container h1 {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--texto);
+}
+
+.acercade-container h2 {
+    font-size: 1.8rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.acercade-container p {
+    text-align: justify;
+    font-size: 1rem;
+    color: var(--gris);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CONTACTO STYLES */
+.contacto-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contacto-container section {
+    margin-bottom: 2.5rem;
+}
+
+.contacto-container h1 {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--texto);
+}
+
+.contacto-container h2 {
+    font-size: 1.8rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contacto-container p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--gris);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.2rem;
+}
+
+.contacto-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contacto-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--texto);
+    margin-bottom: 0.2rem;
+}
+
+.contacto-container input,
+.contacto-container textarea {
+    margin-top: 6px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.contacto-container textarea {
+    resize: vertical;
+    min-height: 120px;
+    text-align: left;
+}
+
+.contacto-container button {
+    background-color: var(--mostaza);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+    align-self: center;
+    width: 160px;
+}
+
+.contacto-container button:hover {
+    background-color: var(--mostaza-hover);
+}
+
+.redes-sociales ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.redes-sociales li {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    color: var(--texto);
+}
+
+.redes-sociales a {
+    color: var(--verde);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--arena);
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--texto);
+    font-size: 0.95rem;
 }
